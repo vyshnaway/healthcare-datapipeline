@@ -3,11 +3,6 @@
 &gt; End-to-end Azure data pipeline: dirty data generation → ADF ingestion → 
 &gt; Databricks Delta Lake → dbt star schema → Power BI dashboard.
 
-<!-- [Watch 5-Minute Demo](your-loom-link) -->
-
-## Architecture
-[ASCII diagram or image from docs/architecture.md]
-
 ## What This Solves
 - Power BI timeout → Pre-aggregated Gold tables (1K rows vs 500M raw)
 - GDPR deletes → Delta Lake soft-delete + time-travel
@@ -28,12 +23,6 @@
 1. `pip install -r data_generator/requirements.txt`
 2. `python data_generator/generate_patients.py`
 3. [Link to full setup in docs/setup_notes.md]
-
-## Production Roadmap
-[ ] Phase 2: Event Hubs real-time alerts (&lt;10 min SLA)
-[ ] Phase 3: Azure Purview data lineage
-[ ] Phase 4: GitHub Actions CI/CD + dbt Cloud
-[ ] Phase 5: ML feature store for sepsis prediction
 
 ## Tech Stack
 Python | Azure Data Factory | Databricks | Delta Lake | dbt | Power BI
